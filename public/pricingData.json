@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Basic",
+    "price": 10,
+    "currency": "USD",
+    "duration": "month",
+    "features": [
+      "1 Website",
+      "10 GB Storage",
+      "Basic Support",
+      "Email Support"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Standard",
+    "price": 25,
+    "currency": "USD",
+    "duration": "month",
+    "features": [
+      "5 Websites",
+      "50 GB Storage",
+      "Priority Support",
+      "Email + Chat Support",
+      "Free SSL"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Premium",
+    "price": 50,
+    "currency": "USD",
+    "duration": "month",
+    "features": [
+      "Unlimited Websites",
+      "200 GB Storage",
+      "24/7 Support",
+      "Email + Chat + Phone Support",
+      "Free SSL",
+      "Daily Backup"
+    ]
+  }
+]
