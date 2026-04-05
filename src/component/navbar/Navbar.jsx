@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Links from './Links';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navItems = [
   {
@@ -38,18 +38,26 @@ const navItems = [
   }
 ];
 
+const navLinks = navItems.map(route=><Links key={route.id} route={route}></Links>)
+
 const Navbar = () => {
+    const [open, setOpen] = useState(false)
     return (
         <nav className='mx-auto w-11/12 my-4 flex items-center justify-between'>
-            <span className='flex gap-2'>
-                <Menu></Menu>
+            <span className='flex gap-2' onClick={()=>setOpen(!open)}>
+            {open? <X className="md:hidden"></X> : <Menu className="md:hidden"></Menu>}
+                <ul className='md:hidden absolute top-14'>
+                    {
+                        navLinks
+                    }
+                </ul>
                 <h3>My Navbar</h3>
             </span>
             {/* system 3 */}
 
-            <ul className='flex gap-4'>
+            <ul className='hidden md:flex gap-4'>
                 {
-                    navItems.map(route=><Links key={route.id} route={route}></Links>)
+                    navLinks
                 }
             </ul>
 
