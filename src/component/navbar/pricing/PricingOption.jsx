@@ -6,9 +6,9 @@ const PricingOption = ({ pricingPromise }) => {
   //   console.log(pricingData);
   return (
     <div>
-      <h1 className="text-6xl">Get our primium Membership</h1>
+      <h1 className="text-6xl mx-10">Get our primium Membership</h1>
 
-      <div className="m-6">
+      <div className="m-6 grid md:grid-cols-3">
         {pricingData.map((pricing) => (
           <PricingCard key={pricing.id} pricing={pricing}></PricingCard>
         ))}
